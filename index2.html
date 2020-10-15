@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+
+    <head> 
+        <!-- A rule of thumb: if you want the script to run 
+        before the contents of the page are rendered, ADD IT TO THE HEAD -->
+
+        <meta charset='UTF-8'> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>An empty page</title>
+    </head>
+
+    <!-- If we want the script to run after the contents of the page are rendered, add it AFTER the BODY -->
+    <body>
+
+    </body>
+
+        <!-- The Script Tag and its contents can be place in the head of the HTML, 
+        inside the body element or after the element -->
+    <script src='script2.js'></script> <!-- Here is where our JavaScript work is going to go! --> 
+
+        <!-- instead of using the index.html file to write our code
+        here we are referencing another file script.js where all our JS work will be -->
+
+        <!-- when trying to move the SCRIPT inside the HEAD we get an error "Cannot set prop 'innerHTML of null"
+        the browser sees the reference in the head then holds off on rendering the rest of the page 
+        while it downloads and runs the script and then renders the rest of the page and we get an error -->
+
+        <!-- Because JavaScript may change to HTML in CSS on a page anytime a browser encounters a JavaScript file reference 
+        it STOPS the rendering of the page until the script file is downloaded and executed
+        this is known as JAVASCRIPT RENDER BLOCKING and it can slow down the performance of a site significantly -->
+        
+        <!-- In SOME cases this is necessary because we want the script to run before the content is rendered USUALLY not what we want -->
+</html>
